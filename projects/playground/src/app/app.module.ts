@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { CbxFormsModule } from 'projects/cbx-forms/src/public_api';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -10,6 +11,7 @@ import { CbxFormsModule } from 'projects/cbx-forms/src/public_api';
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     CbxFormsModule,
   ],
   providers: [],

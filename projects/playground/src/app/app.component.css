@@ -1,0 +1,19 @@
+label.invalid {
+    color: red;
+    font-weight: bold;
+}
+label.valid {
+    color: green;
+    font-weight: bold;
+}
+
+input.invalid {
+    color: red;
+    border: 1px solid red;
+    font-weight: bold;
+}
+input.valid {
+    color: green;
+    border: 1px solid green;
+    font-weight: bold;
+}

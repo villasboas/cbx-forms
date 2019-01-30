@@ -1,5 +1,6 @@
 import { CbxFormsService } from './../../../cbx-forms/src/lib/cbx-forms.service';
 import { Component } from '@angular/core';
+import CbxForm from 'projects/cbx-forms/src/lib/cbx-form.class';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,15 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'playground';
 
-  constructor(public cbxForms: CbxFormsService) {
-    this.cbxForms.doAlert();
+  loginForm: CbxForm;
+
+  constructor(cbxForm: CbxFormsService) {
+    this.loginForm = cbxForm.setup([
+      ['email', 'email|required']
+    ]);
+  }
+
+  submit() {
+    console.log(this.loginForm.group.controls);
   }
 }
