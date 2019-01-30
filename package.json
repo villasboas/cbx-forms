@@ -7,7 +7,13 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "build:lib": "ng build cbx-forms",
+    "pack": "cd dist/cbx-forms && npm pack",
+    "copy:license": "cp LICENSE dist/cbx-forms/LICENSE",
+    "copy:readme": "cp README.md dist/cbx-forms/README.md",
+    "copy:files": "npm run copy:license && npm run copy:readme",
+    "package": "npm run build:lib && npm run copy:files && npm run pack"
   },
   "private": true,
   "dependencies": {

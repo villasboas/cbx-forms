@@ -1,6 +1,18 @@
 {
   "name": "cbx-forms",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/villasboas/cbx-forms.git"
+  },
+  "bugs": {
+    "url": "https://github.com/villasboas/cbx-forms/issues"
+  },
+  "homepage": "https://github.com/villasboas/cbx-forms#readme",
+  "author": "Gustavo Vilas Bôas",
+  "description": "This is a forms validation library for Angular and Ionic Library projects.",
+  "keywords" :["Angular", "Library", "Form Validation", "Ionic"],
+  "license" : "MIT",
   "peerDependencies": {
     "@angular/common": "^7.2.0",
     "@angular/core": "^7.2.0"
