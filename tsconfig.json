@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "cbx-forms": [
+        "dist/cbx-forms"
+      ],
+      "cbx-forms/*": [
+        "dist/cbx-forms/*"
+      ]
+    }
   }
 }
