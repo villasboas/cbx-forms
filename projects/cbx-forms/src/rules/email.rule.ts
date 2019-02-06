@@ -1,5 +1,6 @@
 import { FormControl } from '@angular/forms';
 import Rule from "../interfaces/rule.interface";
+import validator from 'validator';
 
 /*-----------------------------
  | Email Rule
@@ -11,8 +12,7 @@ const EmailRule: Rule = {
     message: 'O e-mail digitado é invalido',
     callback: (control: FormControl) => {
         if ( control.value ) {
-            const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-            if ( control.value.match( regex ) ) {
+            if ( validator.isEmail(control.value)) {
                 return null;
             } else return { email: true };
         } else return null;

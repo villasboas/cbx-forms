@@ -1,6 +1,6 @@
 {
   "name": "cbx-forms",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/villasboas/cbx-forms.git"
@@ -16,6 +16,7 @@
   "peerDependencies": {
     "@angular/common": "^7.2.0",
     "@angular/core": "^7.2.0",
-    "@angular/forms": "~7.2.0"
+    "@angular/forms": "~7.2.0",
+    "validator": "^10.11.0"
   }
 }

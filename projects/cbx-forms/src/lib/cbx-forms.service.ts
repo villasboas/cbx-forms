@@ -1,8 +1,8 @@
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
 import { Injectable } from '@angular/core';
-import EmailRule from '../rules/email.rule';
 import Rule from '../interfaces/rule.interface';
 import CbxForm from './cbx-form.class';
+import { DefaultRules } from '../rules';
 
 @Injectable({
   providedIn: 'root'
@@ -17,9 +17,7 @@ export class CbxFormsService {
   /**
    * Regras customizadas de validacao
    */
-  private __rules: Array<Rule> = [
-    EmailRule
-  ];
+  private __rules: Array<Rule> = DefaultRules;
 
   /**
    * Método construtor
