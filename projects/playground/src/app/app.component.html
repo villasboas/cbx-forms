@@ -9,7 +9,12 @@
     <br>
     <input type="email" [cbxStatus]="loginForm.controls['email']" formControlName="email" placeholder="E-mail" id="email" />
     <cbx-form-errors [cbxForm]="loginForm" cbxControl="email"></cbx-form-errors>
+    <br><br>
+    <label for="cpf" [cbxStatus]="loginForm.controls['cpf']">CPF</label>
     <br>
+    <input type="cpf" [cbxStatus]="loginForm.controls['cpf']" formControlName="cpf" placeholder="CPF" id="cpf" />
+    <cbx-form-errors [cbxForm]="loginForm" cbxControl="cpf"></cbx-form-errors>
+    <br><br>
     <input type="password" placeholder="*******" name="password" id="password" />
     <br><br>
     {{loginForm.valid}}

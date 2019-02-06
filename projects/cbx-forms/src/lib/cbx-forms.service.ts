@@ -32,7 +32,7 @@ export class CbxFormsService {
    *
    * @param rules 
    */
-  setup(rules: [string[]]) {
+  setup(rules: Array<Array<string>>) {
     return (new CbxForm(this.__formBuilder.group(this.__getRules(rules)), this.__rules));
   }
 
@@ -56,7 +56,7 @@ export class CbxFormsService {
       if ( !rules ) return [];
 
     // Declara as variaveis de controle
-    const rulesArray = rules.split('|'); const retorno = [];
+    const rulesArray = rules.split('|'); const retorno = [];    
 
     // percorre todas as regras
     for ( const r in rulesArray ) {
@@ -89,7 +89,7 @@ export class CbxFormsService {
    *
    * @param rules
    */
-  private __getRules(rules: [string[]]): any[] {
+  private __getRules(rules: Array<Array<string>>): any[] {
     const formControl = [];
     rules.map(rule => {
       formControl[rule[0]] = new FormControl(null, this.__getValidatorArray(rule[1], rule[0]));

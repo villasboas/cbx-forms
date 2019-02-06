@@ -12,11 +12,10 @@ const NotEmptyRule: Rule = {
     message: 'Esse campo é obrigatório',
     callback: (control: FormControl) => {
         if (control.value) {
-            console.log(control.value, validator.isEmpty(control.value, {ignore_whitespace: true}));
-            if (!validator.isEmpty(control.value, {ignore_whitespace: true})) {
-                return null;
-            } else return { not_empty: true };
-        } else return null;
+            if (validator.isEmpty(control.value, {ignore_whitespace: true}) || control.value.length == 0 ) {
+                return { not_empty: true }
+            } else return null;
+        } else return { not_empty: true };
     }
 }
 

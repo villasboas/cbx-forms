@@ -14,7 +14,8 @@ export class AppComponent {
 
   constructor(cbxForm: CbxFormsService) {
     this.loginForm = cbxForm.setup([
-      ['email', 'email|not_empty']
+      ['email', 'email|not_empty'],
+      ['cpf', 'not_empty']
     ]);
   }
 
