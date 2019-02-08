@@ -3,7 +3,7 @@
     <br><br>
     <input type="date" placeholder="Aniversário" name="date" id="date" />
     <br><br>
-    <input type="phone" placeholder="Celular" name="phone" id="phone" />
+    <input type="phone" [cbxStatus]="loginForm.controls['tel']" formControlName="tel" placeholder="Celular" name="phone" id="phone" />
     <br><br>
     <label for="email" [cbxStatus]="loginForm.controls['email']">E-mail</label>
     <br>
@@ -14,6 +14,11 @@
     <br>
     <input type="cpf" [cbxStatus]="loginForm.controls['cpf']" formControlName="cpf" placeholder="CPF" id="cpf" />
     <cbx-form-errors [cbxForm]="loginForm" cbxControl="cpf"></cbx-form-errors>
+    <br><br>
+    <label for="cpf" [cbxStatus]="loginForm.controls['cnpj']">CNPJ</label>
+    <br>
+    <input type="cnpj" [cbxStatus]="loginForm.controls['cnpj']" formControlName="cnpj" placeholder="CNPJ" id="cnpj" />
+    <cbx-form-errors [cbxForm]="loginForm" cbxControl="cnpj"></cbx-form-errors>
     <br><br>
     <input type="password" placeholder="*******" name="password" id="password" />
     <br><br>

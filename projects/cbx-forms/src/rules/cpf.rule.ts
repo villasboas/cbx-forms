@@ -21,12 +21,12 @@ const CpfRule: Rule = {
     
             // verifica se o valor é zero
             if (strCPF == "00000000000") {
-            return null;
+                return { cpf: true };
             }
     
             // faz a soma das partes
             for ( let i=1; i<=9; i++) {
-            Soma = Soma + Number.parseInt( strCPF.substring( i-1, i ) ) * ( 11 - i );
+                Soma = Soma + Number.parseInt( strCPF.substring( i-1, i ) ) * ( 11 - i );
             }
     
             // calcula o resto
@@ -34,12 +34,12 @@ const CpfRule: Rule = {
     
             // verifica se o resto é 11 ou 10
             if ( ( Resto == 10 ) || ( Resto == 11 ) ) {
-            Resto = 0;
+                Resto = 0;
             }
     
             // verifica se o resto é igual ao cpf
             if ( Resto != Number.parseInt( strCPF.substring( 9, 10 ) ) ) {
-            return { valid_cpf: true };
+                return { valid_cpf: true };
             }
     
             // reseta a soma
